@@ -150,7 +150,7 @@ public class Regional_Specialities extends ActionBarActivity {
 
 
 
-        }
+      }
 
         adapter = new ExampleAdapter(this);
         adapter.setData(items);

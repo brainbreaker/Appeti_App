@@ -18,12 +18,12 @@ We enable consumers to buy regional specific food directly from the country’s 
     <string name="cart">Cart</string>
 
     <string name="settings">Settings</string>
-    <string name="title_activity_regional_specialities">Regional Specialities</string>
+    <string name="title_activity_regional_specialities">Delicacies</string>
 
     <string name="action_example">Example action</string>
 
     <string name="action_settings">Settings</string>
-    <string name="title_activity_regional__specialities">Regional_Specialities</string>
+    <string name="title_activity_regional__specialities">Delicacies</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_products">Products</string>
     <string name="title_activity_product">ProductActivity</string>
