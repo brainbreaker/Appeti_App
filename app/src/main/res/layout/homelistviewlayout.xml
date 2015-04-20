@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:background="@color/appeti_green"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="181dp"
+        android:id="@+id/TextView"
+        android:src="@mipmap/appeti_logo"
+        android:focusable="false"
+        android:clickable="false"
+        android:text="RAJASTHAN"
+        android:textAlignment="gravity"
+        android:textColor="@color/appeti_white"
+        android:textSize="50dp"
+        android:gravity="center_vertical|center_horizontal" />
+</LinearLayout>

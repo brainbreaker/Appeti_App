@@ -1,0 +1,50 @@
+<LinearLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:background="@color/appeti_white">
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:id="@+id/imageView"
+        android:src="@mipmap/appetilogo1"
+
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/appeti_white"
+        android:layout_alignParentBottom="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="122dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/who_are_we"
+        android:id="@+id/whoarewe"
+        android:textSize="20dp"
+        android:textColor="@color/appeti_green"
+
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textAlignment="center"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_marginTop="10dp" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="SHOP NOW!"
+        android:textColor="@color/appeti_white"
+        android:focusable="true"
+        android:background="#ff08380a"
+        android:textSize="50dp"
+
+        android:id="@+id/shopnow"
+
+        android:layout_marginRight="0dp"
+        android:layout_weight="0.07"
+        android:layout_marginTop="50dp" />
+
+</LinearLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sunshine.bbreaker.appet_i" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/appeti_logo"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".Home"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Regional_Specialities"
+            android:label="@string/title_activity_regional__specialities" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Products"
+            android:label="@string/title_activity_products" >
+        </activity>
+        <activity
+            android:name=".ProductActivity"
+            android:label="@string/title_activity_product" >
+        </activity>
+        <activity
+            android:name=".Cart"
+            android:label="@string/title_activity_cart" >
+        </activity>
+        <activity
+            android:name=".Checkout"
+            android:label="@string/title_activity_checkout" >
+        </activity>
+    </application>
+
+</manifest>
