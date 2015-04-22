@@ -23,6 +23,11 @@ public class Products extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_products);
+
+        Intent intent = getIntent();
+        String title = intent.getStringExtra("title");
+        getSupportActionBar().setTitle(title);
+
         ProductlistView = (ListView) findViewById(R.id.productslistView);
 
 

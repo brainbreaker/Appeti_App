@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.TextView;
 
 /**
  * Created by niteshkp on 1/4/15.
@@ -20,6 +21,13 @@ public class ProductsListViewAdapter extends ArrayAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent){
+
+        TextView ProductTitle;
+        switch(position){
+
+            
+
+        }
         return inflater.inflate(R.layout.productslistviewlayout, parent, false);
 
 

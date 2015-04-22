@@ -45,7 +45,7 @@ public class Regional_Specialities extends ActionBarActivity {
 
       switch(i){
 
-      case 0: item.title = "Western India";
+          case 0: item.title = "Western India";
           for (int j = 0; j < 3; j++)
 
           {
@@ -53,6 +53,7 @@ public class Regional_Specialities extends ActionBarActivity {
 
               switch(j)
               {
+
               case 0: child.title = "Rajasthan";
 
 
@@ -101,7 +102,7 @@ public class Regional_Specialities extends ActionBarActivity {
       case 2: item.title = "Southern India";
           for (int j = 0; j < 3; j++)
 
-          {
+              {
               ChildItem child = new ChildItem();
 
               switch(j)
@@ -175,6 +176,93 @@ public class Regional_Specialities extends ActionBarActivity {
                 return true;
             }
 
+        });
+
+        listView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
+
+            public boolean onChildClick(ExpandableListView parent, View v,
+                                        int groupPosition, int childPosition, long id) {
+                Intent intent;
+               if(groupPosition==0) {
+
+                   switch (childPosition) {
+                       case 0:
+                           intent = new Intent(Regional_Specialities.this, Products.class);
+                           intent.putExtra("title", "Rajasthan");
+                           Regional_Specialities.this.startActivity(intent);
+
+
+                            break;
+                       case 1:
+
+                           intent = new Intent(Regional_Specialities.this, Products.class);
+                           intent.putExtra("title", "Gujarat");
+                           Regional_Specialities.this.startActivity(intent);
+                           break;
+                       case 2:
+
+                           intent = new Intent(Regional_Specialities.this, Products.class);
+                           intent.putExtra("title", "Maharashtra");
+                           Regional_Specialities.this.startActivity(intent);
+                           break;
+                   }
+               }
+                if(groupPosition==1) {
+                    switch (childPosition) {
+                        case 0:
+
+                            intent = new Intent(Regional_Specialities.this, Products.class);
+                            intent.putExtra("title", "Haryana");
+                            Regional_Specialities.this.startActivity(intent);
+                            break;
+                        case 1:
+
+                            intent = new Intent(Regional_Specialities.this, Products.class);
+                            intent.putExtra("title", "Jammu and Kashmir");
+                            Regional_Specialities.this.startActivity(intent);
+                            break;
+                        case 2:
+
+                            intent = new Intent(Regional_Specialities.this, Products.class);
+                            intent.putExtra("title", "Uttar Pradesh");
+                            Regional_Specialities.this.startActivity(intent);
+                            break;
+                    }
+                }
+                if(groupPosition==2) {
+                    switch (childPosition) {
+                        case 0:
+
+                            intent = new Intent(Regional_Specialities.this, Products.class);
+                            intent.putExtra("title", "Karnataka");
+                            Regional_Specialities.this.startActivity(intent);
+                            break;
+                        case 1:
+
+                            intent = new Intent(Regional_Specialities.this, Products.class);
+                            intent.putExtra("title", "Andhra Pradesh");
+                            Regional_Specialities.this.startActivity(intent);
+                            break;
+                        case 2:
+
+                            intent = new Intent(Regional_Specialities.this, Products.class);
+                            intent.putExtra("title", "Kerela");
+                            Regional_Specialities.this.startActivity(intent);
+                            break;
+                    }
+                }
+                if(groupPosition==3) {
+                    switch (childPosition) {
+                        case 0:
+
+                            intent = new Intent(Regional_Specialities.this, Products.class);
+                            intent.putExtra("title", "Madhya Pradesh");
+                            Regional_Specialities.this.startActivity(intent);
+                            break;
+                    }
+                }
+                return true;
+            }
         });
 
 }
@@ -255,13 +343,13 @@ public class Regional_Specialities extends ActionBarActivity {
                 holder = new ChildHolder();
                 convertView = inflater.inflate(R.layout.list_item, parent, false);
                 holder.title = (TextView) convertView.findViewById(R.id.textTitle);
-                holder.hint = (TextView) convertView.findViewById(R.id.textHint);
+
                 convertView.setTag(holder);
             } else {
                 holder = (ChildHolder) convertView.getTag();
             }
             holder.title.setText(item.title);
-            holder.hint.setText(item.hint);
+
             return convertView;
         }
 
