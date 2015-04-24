@@ -1,13 +1,13 @@
 <resources>
     <string name="app_name">Appet-i</string>
 
-    <string name="title_section1">All</string>
-    <string name="title_section2">Sweets</string>
-    <string name="title_section3">Cookies</string>
-    <string name="title_section4">Namkeens</string>
-    <string name="title_section5">Pickels</string>
-    <string name="title_section6">Laddoo</string>
-    <string name="title_section7">Other</string>
+    <string name="title_section1">Delicacies</string>
+    <string name="title_section2">Flavours</string>
+    <string name="title_section3">Information</string>
+    <string name="title_section4">My Account</string>
+    <string name="title_section5"></string>
+    <string name="title_section6"></string>
+    <string name="title_section7"></string>
     <string name="search">Search</string>
     <string name="who_are_we">
 We enable consumers to buy regional specific food directly from the country’s best independent food makers.</string>

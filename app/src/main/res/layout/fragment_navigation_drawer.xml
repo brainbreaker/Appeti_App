@@ -19,7 +19,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginLeft="20dp"
             android:textStyle="bold"
-            android:text="Categories"
+            android:text="Appet-i World"
             android:textSize="40dp"
             android:textAlignment="gravity"
             android:textColor="@color/appeti_white"

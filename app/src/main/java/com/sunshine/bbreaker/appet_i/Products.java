@@ -1,7 +1,9 @@
 package com.sunshine.bbreaker.appet_i;
 
 import android.app.ListActivity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
@@ -15,24 +17,119 @@ import android.view.ViewGroup;
 import android.os.Build;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
+
+import java.util.ArrayList;
 
 
 public class Products extends ActionBarActivity {
     private ListView ProductlistView;
+    ProductsListViewAdapter Adapter;
+
+
+
+    Context context;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_products);
+        ProductlistView = (ListView) findViewById(R.id.productslistView);
+        context = this;
 
         Intent intent = getIntent();
         String title = intent.getStringExtra("title");
         getSupportActionBar().setTitle(title);
 
-        ProductlistView = (ListView) findViewById(R.id.productslistView);
+        /* Using if else to change the values in the array */
+
+        if(title.equals("Rajasthan")){
+
+            int [] ProductImages={R.drawable.ghewar,R.drawable.tilkeladdoo, R.drawable.kalakand};
+             String [] ProductNameList={"Paneer Ghewar","Til Ke Laddoo", "Kalakand"};
+
+            Adapter=new ProductsListViewAdapter( this, ProductNameList, ProductImages  );
+        }
+        else if(title.equals("Gujarat"))
+        {
+            int [] ProductImages={R.drawable.khakra};
+            String [] ProductNameList={"Gujrati Khakra"};
+
+            Adapter=new ProductsListViewAdapter( this, ProductNameList, ProductImages  );
+
+        }
+        else if(title.equals("Maharashtra"))
+        {
+            int [] ProductImages={R.drawable.icehalwa,R.drawable.lehsunsev
+            };
+            String [] ProductNameList={"Bombay Ice Halwa","Ratlami Sev"};
+
+            Adapter=new ProductsListViewAdapter( this, ProductNameList, ProductImages  );
+
+        }
+        else if(title.equals("Uttar Pradesh"))
+        {
+            int [] ProductImages={R.drawable.petha};
+            String [] ProductNameList={"Kesar Angoori Petha",};
+
+            Adapter=new ProductsListViewAdapter( this, ProductNameList, ProductImages  );
+
+        }
+        else if(title.equals("Haryana"))
+        {
+            int [] ProductImages={R.drawable.appetilogo};
+            String [] ProductNameList={"Sorry, Currently no items Available in this category"};
+
+            Adapter=new ProductsListViewAdapter( this, ProductNameList, ProductImages  );
+
+        }
+        else if(title.equals("Jammu and Kashmir"))
+        {
+            int [] ProductImages={R.drawable.kashmirichikki};
+            String [] ProductNameList={"Kashmiri Chikki"};
+
+            Adapter=new ProductsListViewAdapter( this, ProductNameList, ProductImages  );
+
+        }
+        else if(title.equals("Karnataka"))
+        {
+            int [] ProductImages={R.drawable.mysorepak};
+            String [] ProductNameList={"Mysore Pak"};
+
+            Adapter=new ProductsListViewAdapter( this, ProductNameList, ProductImages  );
+
+        }
+        else if(title.equals("Andhra Pradesh"))
+        {
+            int [] ProductImages={R.drawable.appetilogo};
+            String [] ProductNameList={"Sorry, Currently no items Available in this category"};
+
+            Adapter=new ProductsListViewAdapter( this, ProductNameList, ProductImages  );
+
+        }
+        else if(title.equals("Kerela"))
+        {
+            int [] ProductImages={R.drawable.appetilogo};
+            String [] ProductNameList={"Sorry, Currently no items Available in this category"};
+
+            Adapter=new ProductsListViewAdapter( this, ProductNameList, ProductImages  );
+
+        }
+        else
+        {
+            int [] ProductImages={R.drawable.appetilogo};
+            String [] ProductNameList={"Sorry, Currently no items Available in this category"};
+
+            Adapter=new ProductsListViewAdapter( this, ProductNameList, ProductImages  );
+
+        }
+        
+
+        ProductlistView.setAdapter(Adapter);
 
 
-        final ProductsListViewAdapter newlistadapter = new ProductsListViewAdapter(this, new String[10]);
-        ProductlistView.setAdapter(newlistadapter);
+
         ProductlistView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -56,6 +153,10 @@ public class Products extends ActionBarActivity {
     }
 
 
+
+
+
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -77,6 +178,8 @@ public class Products extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
 
     /**
      * A placeholder fragment containing a simple view.
