@@ -182,28 +182,28 @@ public class Regional_Specialities extends ActionBarActivity {
 
             public boolean onChildClick(ExpandableListView parent, View v,
                                         int groupPosition, int childPosition, long id) {
-                Intent intent;
+                Intent productintent;
                if(groupPosition==0) {
 
                    switch (childPosition) {
                        case 0:
-                           intent = new Intent(Regional_Specialities.this, Products.class);
-                           intent.putExtra("title", "Rajasthan");
-                           Regional_Specialities.this.startActivity(intent);
+                           productintent = new Intent(Regional_Specialities.this, Products.class);
+                           productintent.putExtra("title", "Rajasthan");
+                           Regional_Specialities.this.startActivity(productintent);
 
 
                             break;
                        case 1:
 
-                           intent = new Intent(Regional_Specialities.this, Products.class);
-                           intent.putExtra("title", "Gujarat");
-                           Regional_Specialities.this.startActivity(intent);
+                           productintent = new Intent(Regional_Specialities.this, Products.class);
+                           productintent.putExtra("title", "Gujarat");
+                           Regional_Specialities.this.startActivity(productintent);
                            break;
                        case 2:
 
-                           intent = new Intent(Regional_Specialities.this, Products.class);
-                           intent.putExtra("title", "Maharashtra");
-                           Regional_Specialities.this.startActivity(intent);
+                           productintent = new Intent(Regional_Specialities.this, Products.class);
+                           productintent.putExtra("title", "Maharashtra");
+                           Regional_Specialities.this.startActivity(productintent);
                            break;
                    }
                }
@@ -211,21 +211,21 @@ public class Regional_Specialities extends ActionBarActivity {
                     switch (childPosition) {
                         case 0:
 
-                            intent = new Intent(Regional_Specialities.this, Products.class);
-                            intent.putExtra("title", "Haryana");
-                            Regional_Specialities.this.startActivity(intent);
+                            productintent = new Intent(Regional_Specialities.this, Products.class);
+                            productintent.putExtra("title", "Haryana");
+                            Regional_Specialities.this.startActivity(productintent);
                             break;
                         case 1:
 
-                            intent = new Intent(Regional_Specialities.this, Products.class);
-                            intent.putExtra("title", "Jammu and Kashmir");
-                            Regional_Specialities.this.startActivity(intent);
+                            productintent = new Intent(Regional_Specialities.this, Products.class);
+                            productintent.putExtra("title", "Jammu and Kashmir");
+                            Regional_Specialities.this.startActivity(productintent);
                             break;
                         case 2:
 
-                            intent = new Intent(Regional_Specialities.this, Products.class);
-                            intent.putExtra("title", "Uttar Pradesh");
-                            Regional_Specialities.this.startActivity(intent);
+                            productintent = new Intent(Regional_Specialities.this, Products.class);
+                            productintent.putExtra("title", "Uttar Pradesh");
+                            Regional_Specialities.this.startActivity(productintent);
                             break;
                     }
                 }
@@ -233,21 +233,21 @@ public class Regional_Specialities extends ActionBarActivity {
                     switch (childPosition) {
                         case 0:
 
-                            intent = new Intent(Regional_Specialities.this, Products.class);
-                            intent.putExtra("title", "Karnataka");
-                            Regional_Specialities.this.startActivity(intent);
+                            productintent = new Intent(Regional_Specialities.this, Products.class);
+                            productintent.putExtra("title", "Karnataka");
+                            Regional_Specialities.this.startActivity(productintent);
                             break;
                         case 1:
 
-                            intent = new Intent(Regional_Specialities.this, Products.class);
-                            intent.putExtra("title", "Andhra Pradesh");
-                            Regional_Specialities.this.startActivity(intent);
+                            productintent = new Intent(Regional_Specialities.this, Products.class);
+                            productintent.putExtra("title", "Andhra Pradesh");
+                            Regional_Specialities.this.startActivity(productintent);
                             break;
                         case 2:
 
-                            intent = new Intent(Regional_Specialities.this, Products.class);
-                            intent.putExtra("title", "Kerela");
-                            Regional_Specialities.this.startActivity(intent);
+                            productintent = new Intent(Regional_Specialities.this, Products.class);
+                            productintent.putExtra("title", "Kerela");
+                            Regional_Specialities.this.startActivity(productintent);
                             break;
                     }
                 }
@@ -255,9 +255,9 @@ public class Regional_Specialities extends ActionBarActivity {
                     switch (childPosition) {
                         case 0:
 
-                            intent = new Intent(Regional_Specialities.this, Products.class);
-                            intent.putExtra("title", "Madhya Pradesh");
-                            Regional_Specialities.this.startActivity(intent);
+                            productintent = new Intent(Regional_Specialities.this, Products.class);
+                            productintent.putExtra("title", "Madhya Pradesh");
+                            Regional_Specialities.this.startActivity(productintent);
                             break;
                     }
                 }

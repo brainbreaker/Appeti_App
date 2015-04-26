@@ -39,7 +39,7 @@ public class Products extends ActionBarActivity {
         context = this;
 
         Intent intent = getIntent();
-        String title = intent.getStringExtra("title");
+        final String title = intent.getStringExtra("title");
         getSupportActionBar().setTitle(title);
 
         /* Using if else to change the values in the array */
@@ -135,12 +135,102 @@ public class Products extends ActionBarActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Log.d("lol", "lol");
                 Intent intent = null;
-                switch (position) {
+
+                if(title.equals("Rajasthan")){
+
+                    switch (position) {
                     case 0:
-                        intent = new Intent(Products.this, ProductActivity.class);
-                        Products.this.startActivity(intent);
-                        break;
+                            intent = new Intent(Products.this, ProductActivity.class);
+
+                            intent.putExtra("producttitle", "Paneer Ghewar");
+                            break;
+                    case 1:
+                            intent = new Intent(Products.this, ProductActivity.class);
+
+                            intent.putExtra("producttitle", "Til Ke Laddoo");
+                            break;
+                    case 2:
+                            intent = new Intent(Products.this, ProductActivity.class);
+
+                            intent.putExtra("producttitle", "Kalakand");
+                            break;
+
                 }
+                }
+               else if(title.equals("Gujarat")){
+
+                    switch (position) {
+                        case 0:
+                            intent = new Intent(Products.this, ProductActivity.class);
+
+                            intent.putExtra("producttitle", "Gujrati Khakhra");
+                            break;
+
+
+                    }
+                }
+                else if(title.equals("Maharashtra")){
+
+                    switch (position) {
+                        case 0:
+                            intent = new Intent(Products.this, ProductActivity.class);
+
+                            intent.putExtra("producttitle", "Bombay Ice Halwa ");
+                            break;
+                        case 1:
+                            intent = new Intent(Products.this, ProductActivity.class);
+
+                            intent.putExtra("producttitle", "Ratlami Sev");
+                            break;
+
+
+                    }
+                }
+                else if(title.equals("Jammu and Kashmir")){
+
+                    switch (position) {
+                        case 0:
+                            intent = new Intent(Products.this, ProductActivity.class);
+
+                            intent.putExtra("producttitle", "Kashmiri Chikki");
+                            break;
+
+
+                    }
+                }
+                else if(title.equals("Uttar Pradesh")){
+
+                    switch (position) {
+                        case 0:
+                            intent = new Intent(Products.this, ProductActivity.class);
+
+                            intent.putExtra("producttitle", "Kesar Angoori Petha");
+                            break;
+
+                    }
+                }
+                else if(title.equals("Karnataka")){
+
+                    switch (position) {
+                        case 0:
+                            intent = new Intent(Products.this, ProductActivity.class);
+
+                            intent.putExtra("producttitle", "Mysore Pak");
+                            break;
+
+                    }
+                }
+                else{
+
+
+                            intent = new Intent(Products.this, ProductActivity.class);
+
+                            intent.putExtra("producttitle", "No Items Available");
+
+
+
+                }
+                Products.this.startActivity(intent);
             }
         });
 
