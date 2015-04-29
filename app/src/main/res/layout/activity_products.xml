@@ -4,14 +4,16 @@
     tools:context="com.sunshine.bbreaker.appet_i.Products" tools:ignore="MergeRootFrame">
 
 
+
 <ListView
 android:layout_width="wrap_content"
-android:layout_height="wrap_content"
+android:layout_height="fill_parent"
 android:id="@+id/productslistView"
 android:layout_alignParentLeft="true"
 android:layout_alignParentStart="true"
 android:layout_alignParentTop="true"
 android:layout_alignParentRight="true"
-android:layout_alignParentEnd="true" />
+android:layout_alignParentEnd="true"
+    android:background="@drawable/springblurbg" />
 
 </FrameLayout>

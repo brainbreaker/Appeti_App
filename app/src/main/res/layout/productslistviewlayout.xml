@@ -1,32 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="fill_parent"
-    android:layout_height="match_parent"
-    android:weightSum="1"
-    android:background="@color/appeti_white">
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:weightSum="1">
 
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="55dp"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Product Title"
         android:id="@+id/ProductTitle"
-        android:textColor="@color/appeti_white"
+        android:textColor="@color/appeti_dark_green"
         android:gravity="center_vertical|center_horizontal"
-        android:background="@color/appeti_dark_green"
+        android:background="@drawable/greenblurbg"
         android:textSize="50dp"
         android:layout_below="@+id/ProductImage"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentStart="true" />
 
     <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="200dp"
         android:id="@+id/ProductImage"
-        android:background="@color/appeti_green" />
+        android:background="@color/appeti_green"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/mysorepak"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 
 </RelativeLayout>

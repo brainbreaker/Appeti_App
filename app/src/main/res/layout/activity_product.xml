@@ -1,65 +1,68 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:id="@+id/container"
     android:orientation="vertical"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:layout_height="wrap_content" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.sunshine.bbreaker.appet_i.ProductActivity$PlaceholderFragment"
-    android:background="@color/appeti_green"
-    android:clickable="true">
+    android:background="@drawable/springblurbg"
+    android:clickable="true"
+    android:weightSum="1"
+    >
+
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
         android:id="@+id/ProductImage"
-        android:background="@color/appeti_green"
-         />
+        android:src="@drawable/ghewar" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Noodles"
+        android:text="Paneer Ghewar"
         android:id="@+id/ProductTitle"
-        android:textColor="@color/appeti_white"
-        android:background="@color/appeti_green"
-        android:textSize="50dp"
+        android:textColor="@color/appeti_dark_green"
+        android:textSize="35dp"
 
-        android:layout_margin="10dp"
-        android:textStyle="italic" />
+        android:textStyle="normal"
+        android:layout_marginTop="10dp" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="@string/ProductDescription"
+        android:text="@string/ghewar"
         android:id="@+id/ProductDescription"
-        android:background="@color/appeti_green"
-        android:textColor="@color/appeti_white"
+        android:textColor="@color/appeti_dark_green"
         android:textStyle="bold"
         android:textSize="15dp"
         android:textAlignment="gravity"
-       />
+        android:layout_marginTop="10dp" />
 
-    <TextView
+    <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Happy Price-$2"
-        android:id="@+id/PriceTextView"
-        android:textColor="@color/appeti_white"
-        android:textSize="20dp"
-        android:textStyle="bold"
-         />
+        android:layout_height="wrap_content">
+
+
+    </RelativeLayout>
 
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="334dp"
         android:layout_height="wrap_content"
         android:text="Add To Cart"
         android:id="@+id/AddToCartButton"
         android:textColor="@color/background_floating_material_light"
         android:background="@color/appeti_dark_green"
         android:textSize="40dp"
-        />
+        android:layout_marginTop="20dp" />
+
+
 </LinearLayout>
+</ScrollView>

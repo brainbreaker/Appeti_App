@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.os.Build;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -21,7 +22,7 @@ public class ProductActivity extends ActionBarActivity {
     Button addtocart;
     TextView title;
     TextView description;
-    TextView price;
+   // EditText quantity;
     ImageView productimage;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,84 +30,94 @@ public class ProductActivity extends ActionBarActivity {
         setContentView(R.layout.activity_product);
 
 
-        Intent productintent = getIntent();
-        final String producttitle = productintent.getStringExtra("producttitle");
+       Bundle bundle = getIntent().getExtras();
+        String producttitle = bundle.getString("producttitle");
+
         getSupportActionBar().setTitle(producttitle);
 
         addtocart = (Button) findViewById(R.id.AddToCartButton);
 
         title= (TextView) findViewById(R.id.ProductTitle);
         description= (TextView) findViewById(R.id.ProductDescription);
-        price= (TextView) findViewById(R.id.PriceTextView);
+        //quantity = (EditText) findViewById(R.id.QuantityEditText);
         productimage= (ImageView) findViewById(R.id.ProductImage);
 
         if(producttitle.equals("Paneer Ghewar"))
         {
             productimage.setImageResource(R.drawable.ghewar);
             title.setText("Paneer Ghewar");
-            description.setText("");
-            price.setText("");
+            description.setText(R.string.ghewar);
+
         }
-        if(producttitle.equals("Kalakand"))
+        else if(producttitle.equals("Kalakand"))
         {
             productimage.setImageResource(R.drawable.kalakand);
             title.setText("Kalakand");
-            description.setText("");
-            price.setText("");
+            description.setText(R.string.kalakand);
+
         }
-        if(producttitle.equals("Bombay Ice Halwa"))
+       else if(producttitle.equals("Bombay Ice Halwa"))
         {
             productimage.setImageResource(R.drawable.icehalwa);
             title.setText("Bombay Ice Halwa");
-            description.setText("");
-            price.setText("");
+            description.setText(R.string.bombayicehalwa);
+
         }
-        if(producttitle.equals("Kashmiri Chikki"))
+       else if(producttitle.equals("Kashmiri Chikki"))
         {
             productimage.setImageResource(R.drawable.kashmirichikki);
             title.setText("Kashmiri Chikki");
-            description.setText("");
-            price.setText("");
+            description.setText(R.string.kashmirichikki);
+
         }
-        if(producttitle.equals("Khakhra"))
+       else if(producttitle.equals("Khakhra"))
         {
             productimage.setImageResource(R.drawable.khakra);
             title.setText("Gujrati Khakra");
-            description.setText("");
-            price.setText("");
+            description.setText(R.string.khakra);
+
         }
-        if(producttitle.equals("Ratlami Sev"))
+       else if(producttitle.equals("Ratlami Sev"))
         {
             productimage.setImageResource(R.drawable.lehsunsev);
             title.setText("Ratlami Sev");
-            description.setText("");
-            price.setText("");
+            description.setText(R.string.ratlamisev);
+
         }
-        if(producttitle.equals("Mysore Pak"))
+        else if(producttitle.equals("Mysore Pak"))
         {
             productimage.setImageResource(R.drawable.mysorepak);
             title.setText("Mysore Pak");
-            description.setText("");
-            price.setText("");
+            description.setText(R.string.mysorepak);
+
         }
-        if(producttitle.equals("Kesar Angoori Petha"))
+       else if(producttitle.equals("Kesar Angoori Petha"))
         {
             productimage.setImageResource(R.drawable.petha);
             title.setText("Kesar Angoori Petha");
-            description.setText("");
-            price.setText("");
+            description.setText(R.string.petha);
+
         }
-        if(producttitle.equals("Til Ke Laddoo"))
+        else
         {
             productimage.setImageResource(R.drawable.tilkeladdoo);
             title.setText("Til Ke Laddoo");
-            description.setText("");
-            price.setText("");
+            description.setText(R.string.tilekeladdoo);
+
         }
+
+        // OnClickListener for AddToCart button.
         addtocart.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-            Intent opencart = new Intent(getApplicationContext(), Cart.class);
-           startActivity(opencart);
+
+                Intent opencart = new Intent(getApplicationContext(), Cart.class);
+
+            //   Integer quant= Integer.parseInt(quantity.getText().toString());
+                String ProductTitle = title.getText().toString();
+                opencart.putExtra("producttitle",ProductTitle);
+              //  opencart.putExtra("quantity",quant);
+
+                startActivity(opencart);
         }
         });
 

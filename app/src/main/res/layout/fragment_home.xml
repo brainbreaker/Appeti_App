@@ -1,11 +1,17 @@
-<LinearLayout
+<ScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <LinearLayout
     android:layout_height="match_parent"
     android:layout_width="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+
     android:id="@+id/container"
     android:orientation="vertical"
     android:weightSum="1"
-    android:background="@color/appeti_white">
+    android:background="#fffffdc0">
     <ImageView
         android:layout_width="fill_parent"
         android:layout_height="100dp"
@@ -14,8 +20,8 @@
 
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:background="@color/appeti_white"
-        android:layout_alignParentBottom="true" />
+        android:layout_alignParentBottom="true"
+        android:background="#fffff80f" />
 
     <TextView
         android:layout_width="match_parent"
@@ -24,15 +30,81 @@
         android:text="@string/who_are_we"
         android:id="@+id/whoarewe"
         android:textSize="20dp"
-        android:textColor="@color/appeti_green"
+        android:textColor="@color/appeti_dark_green"
 
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:textAlignment="center"
         android:gravity="center_vertical|center_horizontal"
-        android:layout_marginTop="10dp" />
+        android:layout_marginTop="10dp"
+        android:autoText="false"
+        android:layout_weight="0.06"
+        android:background="#fffffdc0" />
 
-    <Button
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Western India"
+            android:id="@+id/textView3"
+            android:textSize="35dp"
+            android:textColor="@color/appeti_dark_green"
+            android:enabled="false"
+            android:gravity="center_vertical|center_horizontal"
+            android:background="#9999FF" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/WestDescription"
+            android:id="@+id/WestDescription"
+            android:textColor="#ff0d3b0b"
+            android:textSize="15dp"
+            android:layout_marginTop="10dp"
+            android:background="#fffffdc0" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Northern India"
+            android:id="@+id/NorthernEditText"
+            android:textSize="35dp"
+            android:textColor="@color/appeti_dark_green"
+            android:enabled="false"
+            android:background="#ffcc00"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/NorthDescription"
+            android:id="@+id/NorthDescription"
+            android:textColor="@color/appeti_dark_green"
+            android:textSize="15dp"
+            android:layout_marginTop="10dp"
+            android:background="#fffffdc0" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Southern India"
+            android:id="@+id/SouthTextView"
+            android:textSize="35dp"
+            android:textColor="@color/appeti_dark_green"
+            android:enabled="false"
+            android:background="#33ccff"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical|center_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/SouthDescription"
+            android:id="@+id/SouthDescription"
+            android:textColor="@color/appeti_dark_green"
+            android:textSize="15dp"
+            android:layout_marginTop="10dp"
+            android:background="#fffffdc0" />
+
+        <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="SHOP NOW!"
@@ -44,7 +116,7 @@
         android:id="@+id/shopnow"
 
         android:layout_marginRight="0dp"
-        android:layout_weight="0.07"
-        android:layout_marginTop="50dp" />
+        android:layout_marginTop="10dp" />
 
 </LinearLayout>
+</ScrollView>

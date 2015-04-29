@@ -11,7 +11,8 @@
         android:paddingBottom="10dp"
         android:id="@+id/textTitle"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:background="@drawable/greenblurbg" />
 
 </LinearLayout>

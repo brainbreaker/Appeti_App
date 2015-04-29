@@ -1,0 +1,167 @@
+<ScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.sunshine.bbreaker.appet_i.Order_Summary"
+    android:id="@+id/container"
+    android:background="#ffcc00"
+    >
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Order Summary"
+            android:id="@+id/textView8"
+            android:textColor="@color/appeti_dark_green"
+            android:textSize="30dp"
+            android:layout_alignParentTop="true"
+            android:background="#fffff942"
+            android:layout_alignRight="@+id/PImage"
+            android:layout_alignEnd="@+id/PImage"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:text="New Text"
+            android:id="@+id/textView9"
+            android:layout_gravity="right"
+            android:layout_weight="0.16" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:id="@+id/PImage"
+            android:src="@drawable/ghewar"
+            android:layout_below="@+id/textView8"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Paneer Ghewar"
+            android:id="@+id/PTitle"
+            android:textColor="@color/appeti_dark_green"
+            android:textSize="20dp"
+            android:layout_below="@+id/PImage"
+            android:layout_alignRight="@+id/QuantityEditText"
+            android:layout_alignEnd="@+id/QuantityEditText"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/textView2"
+            android:layout_toEndOf="@+id/textView2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Weight"
+            android:id="@+id/QuantityTextView"
+            android:textColor="@color/appeti_dark_green"
+            android:textSize="20dp"
+            android:layout_alignTop="@+id/QuantityEditText"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Amount"
+            android:id="@+id/textView12"
+            android:textColor="@color/appeti_dark_green"
+            android:textSize="25dp"
+            android:layout_below="@+id/QuantityEditText"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignBottom="@+id/AmountEditText"
+            android:gravity="center_vertical|fill_vertical" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Item Name"
+        android:id="@+id/textView"
+        android:textColor="@color/appeti_dark_green"
+        android:textSize="20dp"
+        android:layout_alignTop="@+id/PTitle"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/QuantityEditText"
+        android:textColor="@color/appeti_dark_green"
+        android:text="0"
+        android:textSize="20dp"
+        android:layout_alignRight="@+id/PImage"
+        android:layout_alignEnd="@+id/PImage"
+        android:layout_below="@+id/textView"
+        android:layout_toRightOf="@+id/textView2"
+        android:layout_toEndOf="@+id/textView2" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/AmountEditText"
+        android:textColor="@color/appeti_dark_green"
+        android:text="0.00"
+        android:textSize="20dp"
+        android:layout_alignRight="@+id/QuantityEditText"
+        android:layout_alignEnd="@+id/QuantityEditText"
+        android:layout_below="@+id/QuantityEditText"
+        android:layout_alignLeft="@+id/QuantityEditText"
+        android:layout_alignStart="@+id/QuantityEditText" />
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shipping Address"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/AmountEditText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/appeti_dark_green"
+        android:textSize="20dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="xyzabc"
+            android:id="@+id/ShippingAddressTextView"
+
+            android:textColor="@color/appeti_dark_green"
+            android:textSize="20dp"
+            android:layout_below="@+id/textView2"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Proceed To Payment"
+        android:id="@+id/ProceedToPaymentButton"
+        android:layout_below="@+id/ShippingAddressTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/AmountEditText"
+        android:layout_alignEnd="@+id/AmountEditText"
+        android:layout_marginTop="20dp"
+        android:background="@color/appeti_dark_green"
+        android:textColor="@color/appeti_white"
+        android:textSize="25dp" />
+
+
+</RelativeLayout>
+    </ScrollView>

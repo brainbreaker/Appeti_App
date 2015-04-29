@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.sunshine.bbreaker.appet_i" >
-
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/appeti_logo"
@@ -41,6 +41,14 @@
         <activity
             android:name=".Checkout"
             android:label="@string/title_activity_checkout" >
+        </activity>
+        <activity
+            android:name=".Order_Summary"
+            android:label="@string/title_activity_order__summary" >
+        </activity>
+        <activity
+            android:name=".PayMentGateWay"
+            android:label="@string/title_activity_pay_ment_gate_way" >
         </activity>
     </application>
 

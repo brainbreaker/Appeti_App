@@ -12,14 +12,110 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.os.Build;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class Cart extends ActionBarActivity {
-
+    Button checkout;
+    TextView ProductTitle;
+    ImageView ProductImage;
+    EditText Quantity;
+    TextView Amount;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cart);
+
+        Bundle bundle= getIntent().getExtras();
+        final String producttitle = bundle.getString("producttitle");
+      //  Integer qty = bundle.getInt("quantity");
+
+        ProductTitle=(TextView) findViewById(R.id.ProductTitleTextView);
+        ProductImage=(ImageView) findViewById(R.id.ProductImageView);
+        Quantity= (EditText) findViewById(R.id.QuantityEditText);
+        Amount=(TextView) findViewById(R.id.AmountEditText);
+        Quantity.setText("1");
+        Integer quantity = Integer.parseInt(Quantity.getText().toString());
+
+
+        if("".equals(quantity)){
+            Toast toast= Toast.makeText(getApplicationContext(),"Please enter Valid Number in quantity",Toast.LENGTH_SHORT);
+            toast.show();
+        }
+
+        ProductTitle.setText(producttitle);
+      //        Quantity.setText(qty +"KG");
+
+        // Setting up of image view based on the product selected
+        if(producttitle.equals("Paneer Ghewar"))
+        {
+        ProductImage.setImageResource(R.drawable.ghewar);
+            Amount.setText("Rs"+quantity*600);
+        }
+        if(producttitle.equals("Til Ke Laddoo"))
+        {
+            ProductImage.setImageResource(R.drawable.tilkeladdoo);
+            Amount.setText("Rs"+quantity*400);
+        }
+
+        if(producttitle.equals("Kalakand"))
+        {
+            ProductImage.setImageResource(R.drawable.kalakand);
+            Amount.setText("Rs"+quantity*450);
+        }
+
+        if(producttitle.equals("Kesar Angoori Petha"))
+        {
+            ProductImage.setImageResource(R.drawable.petha);
+            Amount.setText("Rs"+quantity*500);
+        }
+
+        if(producttitle.equals("Gujarati Khakhra"))
+        {
+            ProductImage.setImageResource(R.drawable.khakra);
+            Amount.setText("Rs"+quantity*150);
+        }
+
+        if(producttitle.equals("Mysore Pak"))
+        {
+            ProductImage.setImageResource(R.drawable.mysorepak);
+            Amount.setText("Rs"+quantity*400);
+        }
+
+        if(producttitle.equals("Bombay Ice Halwa"))
+        {
+            ProductImage.setImageResource(R.drawable.icehalwa);
+            Amount.setText("Rs"+quantity*1000);
+        }
+
+        if(producttitle.equals("Ratlami Sev"))
+        {
+            ProductImage.setImageResource(R.drawable.lehsunsev);
+            Amount.setText("Rs"+quantity*400);
+        }
+
+        if(producttitle.equals("Kashmiri Chikki"))
+        {
+            ProductImage.setImageResource(R.drawable.kashmirichikki);
+            Amount.setText("Rs"+quantity*250);
+        }
+
+
+
+        // OnClickListener for checkout button
+        checkout =(Button) findViewById(R.id.checkoutbutton);
+        checkout.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent opencheckout = new Intent(getApplicationContext(), Checkout.class);
+                opencheckout.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                opencheckout.putExtra("PName", producttitle);
+                getApplicationContext().startActivity(opencheckout);
+            }
+        });
+
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.container, new PlaceholderFragment())
@@ -63,15 +159,7 @@ public class Cart extends ActionBarActivity {
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_cart, container, false);
 
-            // OnClickListener for Proceed To Checkout button
 
-            checkout =(Button) rootView.findViewById(R.id.checkout);
-            checkout.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View v) {
-                    Intent opencheckout = new Intent(getActivity(), Checkout.class);
-                    getActivity().startActivity(opencheckout);
-                }
-            });
             return rootView;
         }
     }

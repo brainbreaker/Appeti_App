@@ -1,4 +1,125 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:id="@+id/container"
-    android:layout_width="match_parent" android:layout_height="match_parent"
-    tools:context="com.sunshine.bbreaker.appet_i.Cart" tools:ignore="MergeRootFrame" />
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="wrap_content"
+    android:layout_height="fill_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools" android:layout_width="wrap_content"
+android:layout_height="wrap_content" android:paddingLeft="@dimen/activity_horizontal_margin"
+android:paddingRight="@dimen/activity_horizontal_margin"
+android:paddingTop="@dimen/activity_vertical_margin"
+android:paddingBottom="@dimen/activity_vertical_margin"
+tools:context="com.sunshine.bbreaker.appet_i.Cart$PlaceholderFragment"
+android:background="@drawable/springblurbg"
+android:id="@+id/container">
+
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Kesar Angoori Petha"
+    android:id="@+id/ProductTitleTextView"
+    android:textColor="@color/appeti_dark_green"
+    android:textStyle="bold"
+    android:textSize="30sp"
+    android:layout_alignParentTop="true"
+    android:textAlignment="gravity"
+    android:gravity="center_horizontal"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentEnd="true"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true" />
+
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textAppearance="?android:attr/textAppearanceMedium"
+    android:id="@+id/quantity"
+    android:textColor="@color/appeti_dark_green"
+    android:textSize="30sp"
+    android:textStyle="bold"
+    android:layout_marginTop="36dp"
+    android:layout_below="@+id/ProductImageView"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Weight In KG"
+        android:id="@+id/textView2"
+        android:textColor="@color/appeti_dark_green"
+        android:textSize="35dp"
+
+        android:textStyle="bold"
+        android:layout_alignTop="@+id/quantity"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="0dp" />
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/QuantityEditText"
+        android:textColor="@color/appeti_dark_green"
+        android:textSize="30dp"
+        android:autoText="false"
+        android:hint="Enter  weight in KG"
+        android:textColorHint="@color/appeti_dark_green"
+        android:inputType="numberSigned"
+        android:textStyle="italic"
+        android:layout_below="@+id/quantity"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:text="Proceed To Checkout"
+        android:id="@+id/checkoutbutton"
+        android:background="@color/appeti_dark_green"
+        android:textColor="@color/appeti_white"
+        android:textSize="25sp"
+
+        android:layout_below="@+id/AmountEditText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Amount"
+        android:id="@+id/textView4"
+        android:textColor="@color/appeti_dark_green"
+        android:textSize="35dp"
+        android:layout_below="@+id/QuantityEditText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/AmountEditText"
+        android:textColor="@color/appeti_dark_green"
+        android:textSize="35dp"
+        android:autoText="false"
+        android:hint="Amount"
+        android:textColorHint="@color/appeti_dark_green"
+        android:inputType="numberDecimal"
+        android:editable="false"
+
+        android:layout_below="@+id/textView4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textStyle="italic" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:id="@+id/ProductImageView"
+        android:src="@drawable/petha"
+        android:layout_below="@+id/ProductTitleTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+</RelativeLayout>
+</ScrollView>

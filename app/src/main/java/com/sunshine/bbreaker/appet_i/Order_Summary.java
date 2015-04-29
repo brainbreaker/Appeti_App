@@ -32,8 +32,8 @@ public class Order_Summary extends ActionBarActivity {
         Quantity = (EditText) findViewById(R.id.QuantityEditText);
         Amount = (EditText) findViewById(R.id.AmountEditText);
 
-        address = (TextView) findViewById(R.id.AddressEditText);
-        address.setText(ShippingAddress);
+        address = (TextView) findViewById(R.id.ShippingAddressTextView);
+//        address.setText(ShippingAddress);
 
 
         if(PTitle.equals("Paneer Ghewar"))
@@ -90,7 +90,11 @@ public class Order_Summary extends ActionBarActivity {
             Quantity.setText("1KG");
             Amount.setText("Rs 400");
         }
-
+        Quantity.setEnabled(false);
+        Amount.setEnabled(false);
+//        Intent paymentgateway= new Intent(getApplicationContext(), PayMentGateWay.class);
+//        paymentgateway.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//        getApplicationContext().startActivity(paymentgateway);
     }
 
 

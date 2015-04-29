@@ -5,12 +5,17 @@
     <string name="title_section2">Flavours</string>
     <string name="title_section3">Information</string>
     <string name="title_section4">My Account</string>
-    <string name="title_section5"></string>
-    <string name="title_section6"></string>
-    <string name="title_section7"></string>
+
     <string name="search">Search</string>
     <string name="who_are_we">
-We enable consumers to buy regional specific food directly from the country’s best independent food makers.</string>
+"Taste popular and authentic regional delicacies brought to your door step right from the origin by Appet-i team!"</string>
+    <string name="WestDescription">West India, in its many-flavored splendor truly caters to diverse palettes—from spicy to sweet, from crunchy to doughy, and everything in between—and that is the beauty of it.</string>
+
+    <string name="NorthDescription">This part of the country comprises of Jammu And Kashmir, Punjab, Harayana, Delhi and Uttar Pradesh where cuisines are blended in the form of pethas, kesar, gajak, chikkis etc.
+The food culture is equally prominent similar to that of clothing, music, dance, architecture and literature.</string>
+
+    <string name="SouthDescription">The ancient heritage of India for which it is known world wide is well preserved in its temples of South India. The rich taste of food is clearly shown in the likes of Mysore Pak, Kerala’s banana chips, Karachi biscuits of Hyderabad etc.
+</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -27,8 +32,34 @@ We enable consumers to buy regional specific food directly from the country’s 
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_products">Products</string>
     <string name="title_activity_product">ProductActivity</string>
-    <string name="ProductDescription">Noodle is a staple food made from unleavened dough which is stretched, extruded, or rolled flat
-    and cut into one of a variety of shapes.</string>
+
     <string name="title_activity_cart">Cart</string>
     <string name="title_activity_checkout">Checkout</string>
+    <string name="title_activity_order__summary">Order Summary</string>
+
+    <string name="ghewar">Ghewar is a Rajasthani sweet which is known for its matchless sweetness and taste.  It is a round mesh like disc-shaped fried delicacy drenched in sugar syrup and topped with sliced nuts and saffron.
+        Ghevar traces it roots to Jaipur, the capital city of Rajasthan.</string>
+
+    <string name="tilekeladdoo">Til ka ladoo is a traditional winter sweet. This is a simple recipe made with til and jaggery.</string>
+
+    <string name="bombayicehalwa">Bombay ice halwa is a delicious Indian recipe served as a Dessert .</string>
+
+    <string name="ratlamisev">Ratlami sev is a popular fried and crisp snack made with gram flour,clove,pepper and other spices.
+        This is a speciality from the city of Ratlam (Madhya Pradesh).</string>
+
+    <string name="kalakand">There can be various types and places from where the Kalakand can be procured but Appeti boasts of bringing the Kalakand (Milk Cake) from its hinterland (its place of origin), which is Alwar.
+        ‘Kalakand’ (Milk Cake) is a popular Indian sweet made out of solidified, sweetened milk and khoya. Famous after its originating place Alwar this is commonly known as Alwar’s Kalakand (Milk Cake), which tempts everybody with its rich aroma.</string>
+
+    <string name="kashmirichikki">Crispy and delicious sweet made of Peanut, sugar syrup,cardamom(Elachi) and jaggery(Gur) ideal for all occasions.
+        Since Chikki is a seasonal product it remains available in winter season only.</string>
+
+    <string name="khakra">Originating from the state of Gujarat, as part of Gujarati cuisine in India, Khakhara’s are thin crackers made from mat bean, wheat flour and oil.</string>
+
+    <string name="mysorepak">Mysore pak is a rich sweet dish prepared in butter, from Southern India, usually served as dessert. It originated in Mysore.
+        It is made of generous amounts of ghee, sugar, gram flour, and often cardamom.</string>
+
+    <string name="petha">A juicy Petha dipped in sucrose and sprinkled with pure saffron brings about unmatched quality and purity in taste. It is one of the largest selling variety of Agra\'s Petha. This Petha is flavoured with Kewda essence and elaichi is one of the best variation of Agra\'s most famous sweet tempting dessert.</string>
+    <string name="title_activity_payment__gateway">Payment_Gateway</string>
+    <string name="title_activity_pay_ment_gate_way">PayMentGateWay</string>
+
 </resources>
