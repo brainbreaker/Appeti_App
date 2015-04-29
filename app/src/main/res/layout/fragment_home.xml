@@ -11,7 +11,7 @@
     android:id="@+id/container"
     android:orientation="vertical"
     android:weightSum="1"
-    android:background="#fffffdc0">
+    android:background="#fffffce3">
     <ImageView
         android:layout_width="fill_parent"
         android:layout_height="100dp"
@@ -21,7 +21,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:background="#fffff80f" />
+        android:background="#fffaff0c" />
 
     <TextView
         android:layout_width="match_parent"
@@ -30,7 +30,7 @@
         android:text="@string/who_are_we"
         android:id="@+id/whoarewe"
         android:textSize="20dp"
-        android:textColor="@color/appeti_dark_green"
+        android:textColor="#ff3e54ff"
 
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
@@ -38,8 +38,7 @@
         android:gravity="center_vertical|center_horizontal"
         android:layout_marginTop="10dp"
         android:autoText="false"
-        android:layout_weight="0.06"
-        android:background="#fffffdc0" />
+        android:layout_weight="0.06" />
 
         <TextView
             android:layout_width="match_parent"
@@ -50,17 +49,16 @@
             android:textColor="@color/appeti_dark_green"
             android:enabled="false"
             android:gravity="center_vertical|center_horizontal"
-            android:background="#9999FF" />
+            android:background="#ff180fff" />
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="76dp"
             android:text="@string/WestDescription"
             android:id="@+id/WestDescription"
-            android:textColor="#ff0d3b0b"
+            android:textColor="#ff3e54ff"
             android:textSize="15dp"
-            android:layout_marginTop="10dp"
-            android:background="#fffffdc0" />
+            android:layout_marginTop="10dp" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -75,13 +73,12 @@
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="116dp"
             android:text="@string/NorthDescription"
             android:id="@+id/NorthDescription"
-            android:textColor="@color/appeti_dark_green"
+            android:textColor="#ff3e54ff"
             android:textSize="15dp"
-            android:layout_marginTop="10dp"
-            android:background="#fffffdc0" />
+            android:layout_marginTop="10dp" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -96,27 +93,27 @@
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="99dp"
             android:text="@string/SouthDescription"
             android:id="@+id/SouthDescription"
-            android:textColor="@color/appeti_dark_green"
+            android:textColor="#ff3e54ff"
             android:textSize="15dp"
-            android:layout_marginTop="10dp"
-            android:background="#fffffdc0" />
+            android:layout_marginTop="10dp" />
 
         <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="SHOP NOW!"
-        android:textColor="@color/appeti_white"
+        android:textColor="#ff010219"
         android:focusable="true"
-        android:background="#ff08380a"
-        android:textSize="50dp"
+            android:textSize="40dp"
 
         android:id="@+id/shopnow"
 
         android:layout_marginRight="0dp"
-        android:layout_marginTop="10dp" />
+        android:layout_marginTop="10dp"
+            android:background="#ffcdfa3f"
+            android:textStyle="normal" />
 
 </LinearLayout>
 </ScrollView>
