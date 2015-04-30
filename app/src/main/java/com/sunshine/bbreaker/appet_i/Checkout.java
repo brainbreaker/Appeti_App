@@ -7,8 +7,13 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class Checkout extends ActionBarActivity {
@@ -26,7 +31,7 @@ public class Checkout extends ActionBarActivity {
     String City;
     String Pin;
     String State;
-
+    Spinner spinner;
     Button confirm;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +43,6 @@ public class Checkout extends ActionBarActivity {
         AddressET= (EditText) findViewById(R.id.Address);
         CityET= (EditText) findViewById(R.id.City);
         PinET= (EditText) findViewById(R.id.Pincode);
-        StateET= (EditText) findViewById(R.id.State);
 
         Name= NameET.getText().toString();
         Phone=PhoneET.getText().toString();
@@ -46,7 +50,8 @@ public class Checkout extends ActionBarActivity {
         Address=AddressET.getText().toString();
         City=CityET.getText().toString();
         Pin=PinET.getText().toString();
-        State=StateET.getText().toString();
+
+
 
         Intent producttitle = getIntent();
         final String PTitle= producttitle.getStringExtra("PName");

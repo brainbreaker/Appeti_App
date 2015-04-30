@@ -46,6 +46,7 @@ public class Home  extends ActionBarActivity
 
 
 
+
         mNavigationDrawerFragment = (NavigationDrawerFragment)
                 getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);
         mTitle = getTitle();

@@ -1,5 +1,6 @@
 package com.sunshine.bbreaker.appet_i;
 
+import android.content.Intent;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBarActivity;
@@ -100,6 +101,26 @@ public class NavigationDrawerFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 selectItem(position);
+       switch(position){
+           case 0:
+               Intent intent= new Intent(getActivity(),Home.class);
+               getActivity().startActivity(intent);
+               break;
+           case 1:
+               Intent intent1=new Intent(getActivity(),Regional_Specialities.class);
+               getActivity().startActivity(intent1);
+               break;
+           case 2: Intent intent2=new Intent(getActivity(),Regional_Specialities.class);
+               getActivity().startActivity(intent2);
+               break;
+           case 3: Intent intent3=new Intent(getActivity(),Home.class);
+               getActivity().startActivity(intent3);
+               break;
+           case 4: Intent intent4=new Intent(getActivity(),Regional_Specialities.class);
+               getActivity().startActivity(intent4);
+               break;
+
+       }
             }
         }
         );
@@ -114,6 +135,7 @@ public class NavigationDrawerFragment extends Fragment {
                         getString(R.string.title_section2),
                         getString(R.string.title_section3),
                         getString(R.string.title_section4),
+                        getString(R.string.title_section5)
                        }));
         mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
         return rootView;

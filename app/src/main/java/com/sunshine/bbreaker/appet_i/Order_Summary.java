@@ -5,6 +5,8 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -16,7 +18,7 @@ public class Order_Summary extends ActionBarActivity {
     TextView ProductTitle;
     EditText Quantity;
     EditText Amount;
-
+    Button payment;
 
 
     @Override
@@ -31,7 +33,7 @@ public class Order_Summary extends ActionBarActivity {
         ProductTitle = (TextView) findViewById(R.id.PTitle);
         Quantity = (EditText) findViewById(R.id.QuantityEditText);
         Amount = (EditText) findViewById(R.id.AmountEditText);
-
+        payment= (Button) findViewById(R.id.ProceedToPaymentButton);
         address = (TextView) findViewById(R.id.ShippingAddressTextView);
 //        address.setText(ShippingAddress);
 
@@ -92,9 +94,18 @@ public class Order_Summary extends ActionBarActivity {
         }
         Quantity.setEnabled(false);
         Amount.setEnabled(false);
-//        Intent paymentgateway= new Intent(getApplicationContext(), PayMentGateWay.class);
-//        paymentgateway.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-//        getApplicationContext().startActivity(paymentgateway);
+
+        payment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent paymentgateway= new Intent(getApplicationContext(), Payment_Gateway.class);
+                paymentgateway.putExtra("productname",PTitle);
+                paymentgateway.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                getApplicationContext().startActivity(paymentgateway);
+            }
+        });
+
+
     }
 
 

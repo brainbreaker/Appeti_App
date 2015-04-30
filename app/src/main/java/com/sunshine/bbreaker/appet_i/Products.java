@@ -61,9 +61,8 @@ public class Products extends ActionBarActivity {
         }
         else if(title.equals("Maharashtra"))
         {
-            int [] ProductImages={R.drawable.icehalwa,R.drawable.lehsunsev
-            };
-            String [] ProductNameList={"Bombay Ice Halwa","Ratlami Sev"};
+            int [] ProductImages={R.drawable.icehalwa};
+            String [] ProductNameList={"Bombay Ice Halwa"};
 
             Adapter=new ProductsListViewAdapter( this, ProductNameList, ProductImages  );
 
@@ -118,8 +117,8 @@ public class Products extends ActionBarActivity {
         }
         else
         {
-            int [] ProductImages={R.drawable.appetilogo};
-            String [] ProductNameList={"Sorry, Currently no items Available in this category"};
+            int [] ProductImages={R.drawable.lehsunsev};
+            String [] ProductNameList={"Ratlami Sev"};
 
             Adapter=new ProductsListViewAdapter( this, ProductNameList, ProductImages  );
 
@@ -163,7 +162,7 @@ public class Products extends ActionBarActivity {
                         case 0:
                             intent = new Intent(Products.this, ProductActivity.class);
 
-                            intent.putExtra("producttitle", "Gujrati Khakhra");
+                            intent.putExtra("producttitle", "Gujrati Khakra");
                             break;
 
 
@@ -177,11 +176,7 @@ public class Products extends ActionBarActivity {
 
                             intent.putExtra("producttitle", "Bombay Ice Halwa ");
                             break;
-                        case 1:
-                            intent = new Intent(Products.this, ProductActivity.class);
 
-                            intent.putExtra("producttitle", "Ratlami Sev");
-                            break;
 
 
                     }
@@ -220,14 +215,23 @@ public class Products extends ActionBarActivity {
 
                     }
                 }
-                else{
+                else if(title.equals("Madhya Pradesh")) {
 
+                    switch (position){
 
+                        case 0:
                             intent = new Intent(Products.this, ProductActivity.class);
 
-                            intent.putExtra("producttitle", "No Items Available");
+                            intent.putExtra("producttitle", "Ratlami Sev");
+                            break;
+                    }
 
+                    }
+                else {
 
+                    intent = new Intent(Products.this, ProductActivity.class);
+
+                    intent.putExtra("producttitle", "No Items Available");
 
                 }
                 Products.this.startActivity(intent);

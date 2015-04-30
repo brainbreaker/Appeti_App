@@ -11,11 +11,17 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.os.Build;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class Cart extends ActionBarActivity {
@@ -24,6 +30,7 @@ public class Cart extends ActionBarActivity {
     ImageView ProductImage;
     EditText Quantity;
     TextView Amount;
+    Spinner spinner;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,14 +44,32 @@ public class Cart extends ActionBarActivity {
         ProductImage=(ImageView) findViewById(R.id.ProductImageView);
         Quantity= (EditText) findViewById(R.id.QuantityEditText);
         Amount=(TextView) findViewById(R.id.AmountEditText);
-        Quantity.setText("1");
-        Integer quantity = Integer.parseInt(Quantity.getText().toString());
+      //  Quantity.setText("1");
 
 
-        if("".equals(quantity)){
-            Toast toast= Toast.makeText(getApplicationContext(),"Please enter Valid Number in quantity",Toast.LENGTH_SHORT);
-            toast.show();
+        spinner= (Spinner) findViewById(R.id.spinner);
+        List<String> list = new ArrayList<String>();
+        list.add("1");
+        list.add("2");
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_spinner_item, list);
+        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(dataAdapter);
+        Integer quantity = null;
+        if(spinner.getSelectedItemPosition()==0){
+
+            quantity = 1;
+
         }
+        else{
+            quantity = 2;
+
+        }
+
+//        if("".equals(quantity)){
+//            Toast toast= Toast.makeText(getApplicationContext(),"Please enter Valid Number in quantity",Toast.LENGTH_SHORT);
+//            toast.show();
+//        }
 
         ProductTitle.setText(producttitle);
       //        Quantity.setText(qty +"KG");

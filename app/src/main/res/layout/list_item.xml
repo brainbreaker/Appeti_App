@@ -3,15 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingRight="10dp"
-    android:paddingLeft="50dp">
+    >
 
     <TextView
         android:id="@+id/textTitle"
-        android:layout_width="wrap_content"
+        android:layout_width="368dp"
         android:layout_height="50dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:background="@drawable/greenblurbg"/>
+        android:background="@color/appeti_dull_yellow"/>
 
     <TextView
         android:id="@+id/textHint"

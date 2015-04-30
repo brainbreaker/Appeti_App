@@ -1,48 +1,24 @@
-    <ScrollView
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
     <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
     <LinearLayout
 
 
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:weightSum="1">
 
-    <TextView
-        android:id="@+id/section_label"
-
-        android:layout_width="327dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginStart="20dp"
-        android:textStyle="bold"
-        android:text="Appet-i"
-        android:textSize="40sp"
-        android:textAlignment="gravity"
-        android:textColor="@color/appeti_white"
-        android:background="@color/appeti_green" />
-
-    <ListView
+        <ListView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="568dp"
         android:id="@+id/drawer_list1"
-        android:layout_weight="10.50" />
+        android:background="@drawable/glowgreen" />
 
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:orientation="vertical" android:layout_width="match_parent"
-
-        android:layout_height="wrap_content"
-        android:weightSum="1"
-        android:background="@color/appeti_green">
-
-    </LinearLayout>
     </LinearLayout>
     </RelativeLayout>
-    </ScrollView>
+
 

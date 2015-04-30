@@ -1,10 +1,11 @@
 <resources>
     <string name="app_name">Appet-i</string>
 
-    <string name="title_section1">Delicacies</string>
-    <string name="title_section2">Flavours</string>
-    <string name="title_section3">Information</string>
-    <string name="title_section4">My Account</string>
+    <string name="title_section1">Home</string>
+    <string name="title_section2">Delicacies</string>
+    <string name="title_section3">Flavours</string>
+    <string name="title_section4">Information</string>
+    <string name="title_section5">My Account</string>
 
     <string name="search">Search</string>
     <string name="who_are_we">
@@ -61,5 +62,18 @@ The food culture is equally prominent similar to that of clothing, music, dance,
     <string name="petha">A juicy Petha dipped in sucrose and sprinkled with pure saffron brings about unmatched quality and purity in taste. It is one of the largest selling variety of Agra\'s Petha. This Petha is flavoured with Kewda essence and elaichi is one of the best variation of Agra\'s most famous sweet tempting dessert.</string>
     <string name="title_activity_payment__gateway">Payment_Gateway</string>
     <string name="title_activity_pay_ment_gate_way">PayMentGateWay</string>
+
+    <string name="state_prompt">Choose State</string>
+
+    <string-array name="state_arrays">
+        <item>Gujarat</item>
+        <item>Rajasthan</item>
+        <item>New Delhi</item>
+        <item>Maharashtra</item>
+        <item>Karnataka</item>
+        <item>Madhya Pradesh</item>
+        <item>Haryana</item>
+        <item>Jammu And Kashmir</item>
+    </string-array>
 
 </resources>

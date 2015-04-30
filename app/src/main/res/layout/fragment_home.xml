@@ -11,7 +11,7 @@
     android:id="@+id/container"
     android:orientation="vertical"
     android:weightSum="1"
-    android:background="#fffffce3">
+    android:background="@drawable/greenglow">
     <ImageView
         android:layout_width="fill_parent"
         android:layout_height="100dp"
@@ -30,7 +30,7 @@
         android:text="@string/who_are_we"
         android:id="@+id/whoarewe"
         android:textSize="20dp"
-        android:textColor="#ff3e54ff"
+        android:textColor="#ffffff"
 
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
@@ -49,14 +49,14 @@
             android:textColor="@color/appeti_dark_green"
             android:enabled="false"
             android:gravity="center_vertical|center_horizontal"
-            android:background="#ff180fff" />
+            android:background="@color/appeti_dull_yellow" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="76dp"
             android:text="@string/WestDescription"
             android:id="@+id/WestDescription"
-            android:textColor="#ff3e54ff"
+            android:textColor="#ffffff"
             android:textSize="15dp"
             android:layout_marginTop="10dp" />
         <TextView
@@ -76,7 +76,7 @@
             android:layout_height="116dp"
             android:text="@string/NorthDescription"
             android:id="@+id/NorthDescription"
-            android:textColor="#ff3e54ff"
+            android:textColor="#ffffff"
             android:textSize="15dp"
             android:layout_marginTop="10dp" />
         <TextView
@@ -96,7 +96,7 @@
             android:layout_height="99dp"
             android:text="@string/SouthDescription"
             android:id="@+id/SouthDescription"
-            android:textColor="#ff3e54ff"
+            android:textColor="#ffffff"
             android:textSize="15dp"
             android:layout_marginTop="10dp" />
 
@@ -113,7 +113,7 @@
         android:layout_marginRight="0dp"
         android:layout_marginTop="10dp"
             android:background="#ffcdfa3f"
-            android:textStyle="normal" />
+            android:textStyle="bold" />
 
 </LinearLayout>
 </ScrollView>

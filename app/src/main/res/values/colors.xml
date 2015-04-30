@@ -3,4 +3,10 @@
     <color name="appeti_white">#ffffff</color>
     <color name="appeti_green">#ff4caf50</color>
     <color name="appeti_dark_green">#ff08380a</color>
+    <color name="appeti_bright_yellow">#fffaff0c</color>
+    <color name="appeti_blue">#ff686cff</color>
+    <color name="appeti_dull_yellow">#ffcc00</color>
+    <color name="appeti_sky_blue">#33ccff</color>
+    <color name="appeti_lightyellow_green">#33ccff</color>
+    <color name="appeti_creamish">#fffffce3</color>
 </resources>
